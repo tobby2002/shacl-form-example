@@ -1,0 +1,18 @@
+@prefix : <http://example.org/ex#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:cf8ead1a-d8c5-49e2-91bc-3e17a8d2c4bc a schema:Person ;
+    :likesDogs false ;
+    schema:address [ schema:postalCode 10000 ;
+            schema:streetAddress "sdfasf"^^xsd:string ] ;
+    schema:birthDate "1971-02-18"^^xsd:date ;
+    schema:familyName "jeong3"^^xsd:string ;
+    schema:gender "male" ;
+    schema:givenName "woosik3"^^xsd:string .
+

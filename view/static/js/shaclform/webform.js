@@ -7,6 +7,7 @@ jQuery.fn.getValue = function() {
         return $(this).val();
 }
 
+
 // To set the value of any input field or select field
 jQuery.fn.setValue = function(value) {
     if ($(this).attr('type') == 'checkbox')

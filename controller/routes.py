@@ -3,9 +3,19 @@ from jinja2.exceptions import TemplateNotFound
 import os
 import config as config
 from shaclform import Form2RDFController, generate_form
-
+import pathlib as Path
 routes = Blueprint('controller', __name__)
 
+@routes.route('/deletefiles')
+def deletefiles():
+    try:
+        os.remove(config.APP_DIR + '/map.ttl')
+        os.remove(config.APP_DIR + '/result.ttl')
+        os.remove(config.TEMPLATES_DIR + '/form_contents.html')
+        return render_template('generate_form_prompt.html')
+    except Exception as e:
+        # no file
+        return render_template('generate_form_prompt.html')
 
 @routes.route('/')
 def form():

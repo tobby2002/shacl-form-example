@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/simple.css')}}" />
+    <script>
+        function del_click() {
+            alert("파일을 삭제합니다.");
+            window.location = 'http://127.0.0.1:5000/deletefiles';
+        }
+
+    </script>
 </head>
 <body>
+    <div>
+        <button id="button0" onclick="del_click();">파일삭제(map.ttl, result.ttl, conform.html))</button>
+    </div>
     {% block content %}{% endblock %}
 </body>
 </html>

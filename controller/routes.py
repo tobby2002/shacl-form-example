@@ -2,6 +2,8 @@ from flask import Blueprint, render_template, request, Response, redirect, url_f
 from jinja2.exceptions import TemplateNotFound
 import os
 import config as config
+import shaclform as shacl
+
 routes = Blueprint('controller', __name__)
 
 
@@ -27,7 +29,6 @@ def deletefiles():
 
 @routes.route('/generate_form')
 def gen_form():
-    import shaclform as shacl
     form_filepath = config.TEMPLATES_DIR + '/form_contents.html'
     map_filepath = 'map.ttl'
     try:
@@ -42,10 +43,9 @@ def gen_form():
 
 @routes.route('/post', methods=['POST'])
 def post():
-    import shaclform as shacl
-    form2rdf_controller = shacl.Form2RDFController('http://example.org/ex#')
     try:
-        rdf_result = form2rdf_controller.convert(request, 'map.ttl')
+        baseuri = 'http://example.org/ex#'
+        rdf_result = shacl.Form2RDFController(base_uri=baseuri).convert(request, 'map.ttl')
     except ValueError as e:
         return Response(str(e))
     except FileNotFoundError:

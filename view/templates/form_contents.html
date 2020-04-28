@@ -59,17 +59,24 @@
     <div class='entries'></div>
 </div>
 <div>
-    <input data-label='Do you like dogs?' data-property-id='5' name='5-0' type='checkbox' checked hidden/>
-</div>
-<div>
     <div><label>Do you like cats?</label></div>
     <div class='template' hidden data-max-entries='1' data-min-entries='1'>
         <div>
-            <input data-label='Do you like cats?' data-property-id='6' name='6' type='checkbox' disabled/>
-            <input data-label='Do you like cats?' data-property-id='Unchecked 6' name='Unchecked 6' type='checkbox' hidden checked/>
+            <input data-label='Do you like cats?' data-property-id='5' name='5' type='checkbox' disabled/>
+            <input data-label='Do you like cats?' data-property-id='Unchecked 5' name='Unchecked 5' type='checkbox' hidden checked/>
         </div>
     </div>
     <div class='entries'></div>
+</div>
+<div>
+    <div><label>Email Address</label></div>
+    <div class='template' hidden data-max-entries='1'>
+        <div>
+            <input data-label='Email Address' data-property-id='6' name='6' type='email' value='' disabled/>
+        </div>
+    </div>
+    <div class='entries'></div>
+    <button type='button' class='add-entry'>Add</button> <button type='button' disabled class='remove-entry'>Remove</button>
 </div>
 <div>
     <div><label>Address</label></div>
@@ -101,10 +108,13 @@
     <button type='button' class='add-entry'>Add</button> <button type='button' disabled class='remove-entry'>Remove</button>
 </div>
 <div>
-    <div><label>Email Address</label></div>
-    <div class='template' hidden data-max-entries='1'>
+    <input data-label='Do you like dogs?' data-property-id='8' name='8-0' type='checkbox' checked hidden/>
+</div>
+<div>
+    <div><label>Phone Number</label></div>
+    <div class='template' hidden>
         <div>
-            <input data-label='Email Address' data-property-id='8' name='8' type='email' value='' disabled/>
+            <input data-label='Phone Number' data-property-id='9' name='9' type='tel' value='' disabled/>
         </div>
     </div>
     <div class='entries'></div>
@@ -115,17 +125,7 @@
     <div><i>A number between 1 and 7.</i></div>
     <div class='template' hidden data-max-entries='1'>
         <div>
-            <input data-label='GPA' data-property-id='9' name='9' type='number' min='1.0' max='7.0' value='' disabled/>
-        </div>
-    </div>
-    <div class='entries'></div>
-    <button type='button' class='add-entry'>Add</button> <button type='button' disabled class='remove-entry'>Remove</button>
-</div>
-<div>
-    <div><label>Phone Number</label></div>
-    <div class='template' hidden>
-        <div>
-            <input data-label='Phone Number' data-property-id='10' name='10' type='tel' value='' disabled/>
+            <input data-label='GPA' data-property-id='10' name='10' type='number' min='1.0' max='7.0' value='' disabled/>
         </div>
     </div>
     <div class='entries'></div>

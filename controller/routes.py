@@ -20,7 +20,7 @@ def deletefiles():
     try:
         os.remove(config.APP_DIR + '/map.ttl')
         os.remove(config.APP_DIR + '/result.ttl')
-        os.remove(config.TEMPLATES_DIR + '/form_contents.html')
+        # os.remove(config.TEMPLATES_DIR + '/form_contents.html')
         return render_template('generate_form_prompt.html')
     except Exception as e:
         # no file
